@@ -1,5 +1,5 @@
 {% set name = "pink" %}
-{% set version = "1.1.0" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/pin-{{ name }}/pin_{{ name }}-{{ version }}.tar.gz
-  sha256: daa245925c739d69a14ce2c4b80f9f3758648b7c6f4987b392a78692e6bc67f1
+  sha256: 1cfe7bb95170ba9bb77baddaa41147cadcb2c5e39c80a0f91c1e1331995de331
 
 build:
   noarch: python
