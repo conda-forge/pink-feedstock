@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/pin-{{ name }}/pin_{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/pin-{{ name }}/pin_{{ name }}-{{ version }}.tar.gz
   sha256: 7ce58ee380f6ab0bc037063d0aaac3472a92538be932db137f680a05087330a2
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - flit-core >=2,<4
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - loop-rate-limiters >=0.1.0
     - numpy >=1.19.0
     - osqp
@@ -30,6 +30,8 @@ requirements:
     - quadprog >=0.1.11
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pink
 
