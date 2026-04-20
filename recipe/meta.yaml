@@ -1,5 +1,5 @@
 {% set name = "pink" %}
-{% set version = "4.1.0" %}
+{% set version = "4.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/pin-{{ name }}/pin_{{ name }}-{{ version }}.tar.gz
-  sha256: 30a6e35c94386903b8d78424b41f227df2a34b9b254924aea2324d12ec919d3c
+  sha256: 21ffbb4624377d74036c4c4d1d9ba252a0c912cd7a2469117e768f36179c17e1
 
 build:
   noarch: python
@@ -28,6 +28,7 @@ requirements:
     - proxsuite
     - qpsolvers >=2.5.0
     - quadprog >=0.1.11
+    - typing_extensions
 
 test:
   requires:
