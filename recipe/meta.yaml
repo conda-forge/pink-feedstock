@@ -28,6 +28,7 @@ requirements:
     - proxsuite
     - qpsolvers >=2.5.0
     - quadprog >=0.1.11
+    - typing_extensions
 
 test:
   requires:
