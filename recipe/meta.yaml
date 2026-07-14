@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -41,7 +41,9 @@ about:
   summary: Inverse kinematics for articulated robot models, based on Pinocchio.
   dev_url: https://github.com/stephane-caron/pink
   license: Apache-2.0
-  license_file: LICENSE
+  license_file:
+    - NOTICE
+    - LICENSE
 
 extra:
   recipe-maintainers:
