@@ -1,18 +1,18 @@
 {% set name = "pink" %}
-{% set version = "4.3.0" %}
+{% set version = "4.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/pin-{{ name }}/pin_{{ name }}-{{ version }}.tar.gz
-  sha256: 65964e4a2e125d9f5f927f37ee8b85dcf57e125b4845fe6be034fa64c6ed3379
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/pin-{{ name }}/pin_{{ name }}-{{ version }}.tar.gz
+  sha256: 379d21556e5ac9833e495beb292158bdf83af0782eb5412638a12d1702985a9f
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
